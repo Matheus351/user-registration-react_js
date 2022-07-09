@@ -4,7 +4,7 @@ import Main from '../template/Main'
 
 const headerProps = {
     icon:'users',
-    title:'Users',
+    title:' Users',
     subtitle:'User registration: Add, List, Change and Delete'
 }
 
