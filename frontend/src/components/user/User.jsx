@@ -22,6 +22,13 @@ export default class UserCrud extends Component{
 
     state = {...initialState}
 
+    componentWillMount(){
+        axios(baseUrl)
+        .then(resp=>{
+            this.setState({list: resp.data})
+        })
+    }
+
     clear(){
         this.setState({user:initialState.user})
     }
@@ -40,7 +47,7 @@ export default class UserCrud extends Component{
    
     getUpdateList(user){
         const list = this.state.filter(u=> u.id !== user.id)
-        list.unshift(user)
+        if(user)  list.unshift(user)
         return list
     }
 
@@ -97,6 +104,20 @@ export default class UserCrud extends Component{
         </div>
        ) 
     }
+
+    load(user){
+        this.setState({user})
+    }
+
+    remove(user){
+        axios.delete(`${baseUrl}/${user.id}`)
+        .then(resp=>{
+            const list = this.getUpdateList(null)
+            this.setState({list})
+        })
+    }
+
+    
 
     render(){
         return(
