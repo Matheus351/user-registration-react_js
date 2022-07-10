@@ -1,14 +1,19 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"Matheus Valença",
-            "email":"valencamatheus97@gmail.com"
-        },
-        {
-            "id":2,
-            "name":"Maria Júlia",
-            "email":"maria@empresa.com"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Matheus Valença",
+      "email": "valencamatheus97@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Maria Júlia",
+      "email": "maria@empresa.com"
+    },
+    {
+      "name": "Fulano",
+      "email": "fulano@email.com",
+      "id": 3
+    }
+  ]
 }
